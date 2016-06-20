@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Extension options</title>
+    <style>
+        .form-group {
+            margin: 1.3em 0;
+        }
+
+        #status {
+            color: green;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        input[type='radio'] {
+            position: absolute;
+            margin-left: -20px;
+            padding: 5px;
+        }
+
+        input[type='radio']:hover {
+            cursor: pointer;
+        }
+
+        label {
+            display: inline-block;
+            margin-left: 25px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Select link target</h2>
+    <p>By default the extension will open jokes in a new tab only if you're not already on <a href='https://api.chucknorris.io' target='_blank'>chucknorris.io</a></p>
+    <p>However, you can change this setting forcing the extension to open jokes always in a new tab:</p>
+
+    <div class='form-group'>
+        <label><input type='radio' name='link_target' value='auto' />Automatic</label>
+        <label><input type='radio' name='link_target' value='new_tab' />Open jokes always in a new tab</label>
+    </div>
+
+    <div class='form-group'>
+        <input type='button' id='save' value='Save' />
+        <div id="status"></div>
+    </div>
+
+    <script type='text/javascript' src='../options.js'></script>
+
+</body>
+
+</html>
